@@ -554,7 +554,7 @@ const yaldaNight = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).getTime();
     loginForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const email = document.getElementById('loginEmail').value;
+      const email = document.querySelectorAll('loginEmail').value;
       const password = document.getElementById('loginPassword').value;
 
       const user = users.find(user => user.email === email && user.password === password);
@@ -731,7 +731,7 @@ document.addEventListener('DOMContentLoaded', () => {
    currentAudio = new Audio(audioFile); // ایجاد یک عنصر صوتی
    currentAudio.play(); // پخش فایل صوتی
  }
-/////////////
+///////////////////////////////////
  function hidesidebar (p) {
   const sidebar = document.querySelector('.sidebar')
   sidebar.style.display = 'none'
@@ -741,3 +741,16 @@ document.addEventListener('DOMContentLoaded', () => {
   sidebar.style.display = 'block'
 
  }
+
+
+
+ //////////////////////////////////
+ document.addEventListener('copy' ,(event) => {
+  event.preventDefault()
+  const selectedText = window.getSelection().toString()
+  const siteLink = '  \nمنبع:http://127.0.0.1:5500/'
+
+  const finalText = selectedText + siteLink;
+  event.clipboardData.setData('text/plain', finalText)});
+
+//////////////////////////////////
