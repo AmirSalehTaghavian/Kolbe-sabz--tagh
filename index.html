@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>کلبه سبز</title>
     <link rel="icon" href="./image/sabz-fav.png" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- /////////| کتابخانه ی AOS |\\\\\\\\\ -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" >
     <!-- /////////////////////// -->
@@ -16,6 +16,7 @@
       <img src="./image/loading.gif" class="imgload" alt="" />
     </div>
     <div id="scroll"></div>
+
 <br>
 <br>
 <div class="discount-box">
@@ -84,7 +85,65 @@
           </ul> 
           </div> 
           <!-- ///////////////////////| منو |\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="header1">
+            <div class="header2">
+            <button  class="btn" id="btn-home" value="home" style="background-color: gray;">خانه
+            <button class="btn" id="btn-products" value="products">محصولات</button>
+            <button class="btn" id="btn-whyus" value="whyUs">درباره ی ما</button>
+            <button class="btn" value="search">جست و جو</button>
+            <button class="btn"  id="cart-header" value="basket">سبد خرید (<span id="cart-count">0</span>)</button> 
+             <button class="btn" id="login-Btn">ثبت نام / ورود</button>
+             <a href="#" onclick="showsidebar()" class="menubutton"><img src="./image/menu.svg" alt=""></a>
+  
+            </div>
+  
+            <div id="cart-modal" class="modal">
+              <div class="modal-content">
+                  <h2>سبد خرید</h2>
+                  <div id="cart-items"></div>
+                  <button id="close-cart">بستن</button>
+              </div>
+          </div>
+          
+          <div id="confirmation-modal" class="modal">
+            <div class="modal-content">
+                <p>آیا مطمئن هستید که می‌خواهید این محصول را حذف کنید؟</p>
+                <button id="confirm-delete">حذف</button>
+                <button id="cancel-delete">صرف نظر</button>
+            </div>
+        </div>
+    
+        <div id="message"></div>
+              <span id="userDetails" style="display: none;"></span>
+            <button id="logoutButton" style="display:   none;width: 100px;">خروج</button>
+  
+            <div id="messageBox" class="message-box" style="display: none;">
+              <p id="messageText"></p>
+              <button onclick="closeMessage()">باشه</button>
+            </div>
+            
+    <div id="modal">
+      <div class="container">
+        <h1>پروفایل کاربری</h1>
+        <form id="signupForm">
+          <input type="text" id="signupUsername" placeholder="نام کاربری" required>
+          <input type="email" id="signupEmail" placeholder="ایمیل" required>
+          <input type="password" id="signupPassword" placeholder="رمز عبور" required>
+          
+          <button type="submit">ثبت نام</button>
+          <div class="switch-form" onclick="switchToLogin()">حساب دارید؟ ورود</div>
+        </form>
+        <form id="loginForm" style="display: none;">
+          <input type="email" id="loginEmail" placeholder="ایمیل" required>
+          <input type="password" id="loginPassword" placeholder="رمز عبور" required>
+          <button type="submit">ورود</button>
+          <div class="switch-form" onclick="switchToSignup()">حساب ندارید؟ ثبت‌نام</div>
+        </form>
+      </div>
+    </div>
+          </div>
           <div class="header123">
+
         <div class="sidebar">
           <a href="#" onclick="hidesidebar()"><img src="./image/close.svg" alt=""></a>
           <button  class="btn hideOnmobile" id="btn-home" value="home" style="background-color: gray;">خانه
@@ -138,63 +197,7 @@
     </div>
   </div>
         </div>
-        <div class="header1">
-          <div class="header2">
-          <button  class="btn" id="btn-home" value="home" style="background-color: gray;">خانه
-          <button class="btn" id="btn-products" value="products">محصولات</button>
-          <button class="btn" id="btn-whyus" value="whyUs">درباره ی ما</button>
-          <button class="btn" value="search">جست و جو</button>
-          <button class="btn"  id="cart-header" value="basket">سبد خرید (<span id="cart-count">0</span>)</button> 
-           <button class="btn" id="login-Btn">ثبت نام / ورود</button>
-           <a href="#" onclick="showsidebar()" class="menubutton"><img src="./image/menu.svg" alt=""></a>
-
-          </div>
-
-          <div id="cart-modal" class="modal">
-            <div class="modal-content">
-                <h2>سبد خرید</h2>
-                <div id="cart-items"></div>
-                <button id="close-cart">بستن</button>
-            </div>
-        </div>
-        
-        <div id="confirmation-modal" class="modal">
-          <div class="modal-content">
-              <p>آیا مطمئن هستید که می‌خواهید این محصول را حذف کنید؟</p>
-              <button id="confirm-delete">حذف</button>
-              <button id="cancel-delete">صرف نظر</button>
-          </div>
-      </div>
-  
-      <div id="message"></div>
-            <span id="userDetails" style="display: none;"></span>
-          <button id="logoutButton" style="display:   none;width: 100px;">خروج</button>
-
-          <div id="messageBox" class="message-box" style="display: none;">
-            <p id="messageText"></p>
-            <button onclick="closeMessage()">باشه</button>
-          </div>
-          
-  <div id="modal">
-    <div class="container">
-      <h1>پروفایل کاربری</h1>
-      <form id="signupForm">
-        <input type="text" id="signupUsername" placeholder="نام کاربری" required>
-        <input type="email" id="signupEmail" placeholder="ایمیل" required>
-        <input type="password" id="signupPassword" placeholder="رمز عبور" required>
-        
-        <button type="submit">ثبت نام</button>
-        <div class="switch-form" onclick="switchToLogin()">حساب دارید؟ ورود</div>
-      </form>
-      <form id="loginForm" style="display: none;">
-        <input type="email" id="loginEmail" placeholder="ایمیل" required>
-        <input type="password" id="loginPassword" placeholder="رمز عبور" required>
-        <button type="submit">ورود</button>
-        <div class="switch-form" onclick="switchToSignup()">حساب ندارید؟ ثبت‌نام</div>
-      </form>
-    </div>
-  </div>
-        </div>
+       
         <div class="img-and-parageraf">
           <div class="h-p">
             <strong class="p-store">خوش امدید به این مغازه</strong>
@@ -208,7 +211,7 @@
  <button class="btn-h-p">تماس با ما</button>
 </a>
           </div>
-          <div class="img" id="img-none"> 
+          <div class="img" id="img-c"> 
             <img
               src="./image/slider-img.png"
               alt=""
@@ -224,7 +227,7 @@
         <div class="main1">
           <h2 align="center">
 
-
+          
             <strong>محصولات</strong>
           </h2>
         </div>
@@ -248,7 +251,7 @@
               </button>
               <button class="btn-p1"><p class="pb">بعدا می بینم</p></button>
             </div>
-            <div class="img">
+            <div class="img-11">
               <img
                 src="./image/saving-img.png"
                 alt=""
@@ -316,7 +319,7 @@
                   </button>
                   <button class="btn-p2"><p class="pb">بعدا می بینم</p></button>
                 </div>
-                <div class="img" >
+                <div class="img" id="img-d">
                   <img
                     src="./image/gifts.png"
                     alt=""
@@ -344,7 +347,7 @@
         </div>
         <div class="footer-section">
           <h3>شبکه‌های اجتماعی</h3>
-          <div class="social-icons" align="center">
+          <div class="s"social-icon>
             <a href="#">  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="90px" height="82px" viewBox="0 0 50 50">
               <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
           </svg></a>
@@ -363,9 +366,6 @@
       <img src="./image/enamad.png" alt="enamad">
     </footer>
    
-      <div style="background-color: gray;">
-    <h4 style="margin:0 ;padding: 0;">| توسعه داده شده توسط amir saleh |</h4>
-  </div>
   
     <button class="refresh" data-aos="flip-down">| Refresh Tab |😁</button>
 
@@ -384,10 +384,11 @@
               <button class="send" onclick="sendMessage()" style="background-color: #5A2B81;">ارسال</button>
           </div>
       </div>
-  </div>
+  </div>`
   <div class="chat-toggle" onclick="toggleChat()">💬</div>
+
   
-    <script src="./app.js"></script>
+    <script src="./js/app.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
