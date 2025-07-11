@@ -21,7 +21,7 @@ let productsArray = [
     title: "حلقه",
     price: "500,000ت",
     pricename: "قیمت: ",
-    img: "./image/p1.png",
+    img: "./p1.png",
     priceoff: "450,000 ",
     animation: `data-aos="fade-left"
     data-aos-offset="300"
@@ -34,7 +34,7 @@ let productsArray = [
     title: "ساعت",
     price: "1,500,000ت",
     pricename: "قیمت: ",
-    img: "image/p2.png",
+    img: "p2.png",
     priceoff: "1,320,000 ",
     animation: `data-aos="fade-left"
     data-aos-offset="300"
@@ -47,7 +47,7 @@ let productsArray = [
     title: "خرس تدی سایز 1",
     price: "325,000ت",
     pricename: "قیمت: ",
-    img: "image/p3.png",
+    img: "p3.png",
     priceoff: "300,000 ",
     animation: `data-aos="fade-right"
     data-aos-offset="300"
@@ -60,7 +60,7 @@ let productsArray = [
     title: "دسته گل",
     price: "120,000ت",
     pricename: "قیمت: ",
-    img: "image/p4.png",
+    img: "p4.png",
     priceoff: "100,000 ",
     animation: `data-aos="fade-right"
     data-aos-offset="300"
@@ -72,7 +72,7 @@ let productsArray = [
     tagname: "p",
     title: "خرس تدی سایز 2",
     price: "592,000ت",
-    img: "image/p5.png",
+    img: "p5.png",
     animation: `data-aos="fade-left"
     data-aos-offset="300"
     data-aos-easing="ease-in-sine"`,
@@ -83,7 +83,7 @@ let productsArray = [
     tagname: "p",
     title: "دسته گل",
     price: "150,000ت",
-    img: "image/p6.png",
+    img: "p6.png",
     animation: `data-aos="fade-left"
     data-aos-offset="300"
     data-aos-easing="ease-in-sine"`,
@@ -95,7 +95,7 @@ let productsArray = [
     title: "ساعت",
     price: "1,620,000ت",
     pricename: "قیمت: ",
-    img: "image/p7.png",
+    img: "p7.png",
     priceoff: "1,453,000 ",
     animation: `data-aos="fade-right"
     data-aos-offset="300"
@@ -108,7 +108,7 @@ let productsArray = [
     title: "حلقه",
     price: "700,000ت",
     pricename: "قیمت: ",
-    img: "image/p8.png",
+    img: "p8.png",
     priceoff: "610,000 ",
     animation: `data-aos="fade-right"
     data-aos-offset="300"
